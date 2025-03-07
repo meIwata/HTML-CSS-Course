@@ -1,35 +1,48 @@
+/* 創建一個選擇器，將所有標題和段落的字體設置為 sans-serif */
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+    font-family: sans-serif;
+}
+
 h1 {
     /* color: steelblue; */
     font-size: 26px;
-    font-family: sans-serif;
     text-transform: uppercase;
     font-style: italic;
 }
 
 h2 {
     font-size: 40px;
-    font-family: sans-serif;
 }
 
 h3 {
     font-size: 30px;
-    font-family: sans-serif;
 }
 
 h4 {
     font-size: 20px;
-    font-family: sans-serif;
     text-transform: uppercase;
     text-align: center;
 }
 
 p {
     font-size: 22px;
-    font-family: sans-serif;
     line-height: 1.5;
     /* 1.5倍行距 */
 }
-li{
+
+li {
     font-size: 20px;
-    font-family: sans-serif;
+}
+
+/* 這是後代選擇器Descendant selectors的示例： */
+footer p{
+    font-size: 16px;
+}
+article header p{
+    font-style: italic;
 }
