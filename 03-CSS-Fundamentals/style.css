@@ -6,8 +6,12 @@ h4,
 p,
 li {
     font-family: sans-serif;
+    color: #444;
 }
 
+h1, h2, h3{
+    color: #1098ad;
+}
 h1 {
     /* color: steelblue; */
     font-size: 26px;
@@ -69,3 +73,21 @@ li {
 }
 
 /* CSS建議都使用class選擇器，不要使用id選擇器，因為id選擇器只能使用一次，不可重複使用，而class選擇器可以重複使用。 */
+
+.main-header{
+    background: color #f7f7f7;
+}
+
+aside{
+    background-color: #f7f7f7;
+
+    /* 這是簡寫屬性shorthand property的示例 */
+    /* border: #1098ad 5px solid;  */
+    /* border: #1098ad 5px dotted;
+    border: #1098ad 5px dashed; */
+    border-top: #1098ad 5px solid; /* 上邊框 */
+    border-bottom: #1098ad 5px solid; /* 下邊框 */
+}
+body{
+    background-color: rgb(255, 188, 202);
+}
