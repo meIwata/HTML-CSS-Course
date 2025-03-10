@@ -147,3 +147,25 @@ a:active{/*點擊連結時的樣式*/
     font-style: italic;
     text-decoration: underline lawngreen;
 }
+
+
+/*Resolving Conflicts 解決衝突*/
+/*id選擇器高於其他的*/
+/* #copyright { 
+    color: red;
+} */
+
+/*如果id被取消掉，當.copyright跟.text為同一個層級，會從上面執行到下面，所以黃色會顯現*/
+/* .copyright {
+    color: blue; 
+} */
+/* .text {
+    color: yellow;
+} */
+
+    /*使用!important來強制執行，!important會覆蓋其他的樣式，但不建議使用*/
+/*
+footer p {
+
+    color: green !important; 
+}*/
