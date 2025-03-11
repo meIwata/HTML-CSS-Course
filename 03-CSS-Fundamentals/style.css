@@ -1,12 +1,16 @@
-/* 創建一個選擇器，將所有標題和段落的字體設置為 sans-serif */
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+/*Universal Selector 全域選擇器(等級最低，容易被其他選擇棄覆蓋)，選擇所有的元素*/
+*{
+    /* border-top: 10px solid #1098ad;  */
+}
+
+/* 建立body的樣式 */
+body{
+    /* 這兩個屬性會被繼承到所有的元素 */
+    color:#444;
     font-family: sans-serif;
-    color: #444;
+
+    /*不是所以有屬性都會被繼承，border-top是不會被繼承的*/
+    border-top: 10px solid #1098ad; 
 }
 
 h1,
@@ -169,3 +173,11 @@ footer p {
 
     color: green !important; 
 }*/
+
+/*nav 底下的a的偽類別*/
+/* nav a:link, nav p {
+    font-size: 18px;
+} */
+ nav{
+    font-size: 18px;
+ }
