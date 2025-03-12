@@ -1,6 +1,8 @@
 /*Universal Selector 全域選擇器(等級最低，容易被其他選擇棄覆蓋)，選擇所有的元素*/
 *{
     /* border-top: 10px solid #1098ad;  */
+    margin: 0;
+    padding: 0;
 }
 
 /* 建立body的樣式 */
@@ -21,6 +23,18 @@ body{
 
     /* 上下的padding都是20px，左右的padding是40px */
     padding: 20px 40px;    
+    margin-bottom: 60px;
+}
+nav{
+    font-size: 18px;
+}
+
+article{
+    margin-bottom: 60px;
+}
+
+.post-header{
+    margin-bottom: 40px;
 }
 
 aside {
@@ -34,6 +48,11 @@ aside {
     /* 上邊框 */
     border-bottom: #1098ad 5px solid;
     /* 下邊框 */
+
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    /*可以寫成簡寫屬性*/
+    padding: 50px 0;
 }
 
 h1,
@@ -51,10 +70,13 @@ h1 {
 
 h2 {
     font-size: 40px;
+    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 h4 {
@@ -65,8 +87,12 @@ h4 {
 
 p {
     font-size: 22px;
-    line-height: 1.5;
-    /* 1.5倍行距 */
+    line-height: 1.5; /* 1.5倍行距 */
+    margin-bottom: 15px;
+}
+ul, ol{
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
 li {
@@ -191,6 +217,3 @@ footer p {
 /* nav a:link, nav p {
     font-size: 18px;
 } */
- nav{
-    font-size: 18px;
- }
