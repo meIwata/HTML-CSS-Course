@@ -13,6 +13,29 @@ body{
     border-top: 10px solid #1098ad; 
 }
 
+.main-header {
+    background: color #f7f7f7;
+    /* padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px; */
+
+    /* 上下的padding都是20px，左右的padding是40px */
+    padding: 20px 40px;    
+}
+
+aside {
+    background-color: #f7f7f7;
+
+    /* 這是簡寫屬性shorthand property的示例 */
+    /* border: #1098ad 5px solid;  */
+    /* border: #1098ad 5px dotted;
+    border: #1098ad 5px dashed; */
+    border-top: #1098ad 5px solid;
+    /* 上邊框 */
+    border-bottom: #1098ad 5px solid;
+    /* 下邊框 */
+}
+
 h1,
 h2,
 h3 {
@@ -48,6 +71,11 @@ p {
 
 li {
     font-size: 20px;
+    margin-bottom: 10px;
+}
+/*但li的最後一個元素不要有margin-bottom*/
+li:last-child{
+    margin-bottom: 0;
 }
 
 /* 這是後代選擇器Descendant selectors的示例： */
@@ -81,22 +109,7 @@ li {
 
 /* CSS建議都使用class選擇器，不要使用id選擇器，因為id選擇器只能使用一次，不可重複使用，而class選擇器可以重複使用。 */
 
-.main-header {
-    background: color #f7f7f7;
-}
 
-aside {
-    background-color: #f7f7f7;
-
-    /* 這是簡寫屬性shorthand property的示例 */
-    /* border: #1098ad 5px solid;  */
-    /* border: #1098ad 5px dotted;
-    border: #1098ad 5px dashed; */
-    border-top: #1098ad 5px solid;
-    /* 上邊框 */
-    border-bottom: #1098ad 5px solid;
-    /* 下邊框 */
-}
 
 body {
     background-color: rgb(255, 188, 202);
