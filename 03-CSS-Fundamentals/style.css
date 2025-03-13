@@ -15,6 +15,15 @@ body{
     border-top: 10px solid #1098ad; 
 }
 
+/*建立響應式網頁重點是使用百分比，不要使用固定的寬度*/
+.container{
+    width: 700px; /*先設定容器的寬度*/
+    /*左右邊的margin都是auto，這樣就可以置中*/
+    /* margin-right: auto; 
+    margin-left: auto; */
+    margin: 0 auto; /*速記法: 上下左右的margin都是0，左右的margin是auto*/
+}
+
 .main-header {
     background: color #f7f7f7;
     /* padding: 20px;
