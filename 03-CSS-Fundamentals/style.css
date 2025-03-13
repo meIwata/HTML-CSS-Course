@@ -33,7 +33,7 @@ body{
     /* 上下的padding都是20px，左右的padding是40px */
     padding: 20px 40px;    
     margin-bottom: 60px;
-    height: 80px;
+    /* height: 80px; */
 }
 nav{
     font-size: 18px;
@@ -109,6 +109,7 @@ ul, ol{
 li {
     font-size: 20px;
     margin-bottom: 10px;
+    /* display: inline; */
 }
 /*但li的最後一個元素不要有margin-bottom*/
 li:last-child{
@@ -205,6 +206,22 @@ a:active{/*點擊連結時的樣式*/
 .post-img{
     width: 100%; /*這會跟著父元素的寬度*/
     height: auto;
+}
+
+
+/*行內元素inline element，改成區塊*/
+nav a:link{
+    /* background-color: rgb(154, 255, 187);
+    margin: 20px;
+    padding: 20px;
+
+    display: block;  */
+    margin-right: 30px;
+    display: inline-block; /*讓連結變成區塊*/
+    margin-top: 10px; /*就可以加上margin-top*/
+}
+nav a:link:last-child{ /*最後一個連結不要有margin-right*/
+    margin-right: 0;
 }
 
 
