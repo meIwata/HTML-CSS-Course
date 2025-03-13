@@ -8,11 +8,13 @@
 /* 建立body的樣式 */
 body{
     /* 這兩個屬性會被繼承到所有的元素 */
+    background-color: rgb(255, 188, 202);
     color:#444;
     font-family: sans-serif;
 
     /*不是所以有屬性都會被繼承，border-top是不會被繼承的*/
     border-top: 10px solid #1098ad; 
+    position: relative;
 }
 
 /*建立響應式網頁重點是使用百分比，不要使用固定的寬度*/
@@ -22,6 +24,7 @@ body{
     /* margin-right: auto; 
     margin-left: auto; */
     margin: 0 auto; /*速記法: 上下左右的margin都是0，左右的margin是auto*/
+    /* position: relative; */
 }
 
 .main-header {
@@ -45,6 +48,7 @@ article{
 
 .post-header{
     margin-bottom: 40px;
+    /* position: relative; */
 }
 
 aside {
@@ -149,9 +153,9 @@ li:last-child{
 
 
 
-body {
+/* body {
     background-color: rgb(255, 188, 202);
-}
+} */
 
 /* .first-li{
     font-weight: bold;
@@ -222,6 +226,16 @@ nav a:link{
 }
 nav a:link:last-child{ /*最後一個連結不要有margin-right*/
     margin-right: 0;
+}
+button{
+    font-size: 22px;
+    padding: 20px;
+    cursor: pointer;
+    /* top: 50px;
+    left: 50px; */
+    position: absolute; /*絕對定位*/
+    bottom: 50px;
+    right: 50px;
 }
 
 
