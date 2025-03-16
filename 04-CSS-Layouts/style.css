@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -22,7 +22,6 @@ body {
 
 .main-header {
   background-color: #f7f7f7;
-  background-color: red;
   /* padding: 20px;
   padding-left: 40px;
   padding-right: 40px; */
@@ -296,4 +295,16 @@ nav{
   clear: both;
   content: '';
   display: block;
+}
+
+article{
+width: 825px; /*把原本的900px縮小一點，讓中間有空隙*/
+float: left;
+}
+aside{
+width: 300px;
+float: right;
+}
+footer{
+  clear: both; /*不要讓footer跟article, aside重疊，使用clear: both*/
 }
