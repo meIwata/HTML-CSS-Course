@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+    /* 1.4倍行高 */
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container {
+    /* background-color: red; */
+    display: flex;
+    gap: 40px;
+}
+
+.product-image {
+    /* float: left; */
+
+}
+
+.product {
+    border: 4px solid black;
+    width: 825px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.product-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    background-color: #f7f7f7;
+    margin: 15px;
+}
+
+.product-info {
+    /*(總寬度是825px - border是4px*2 - 圖片寬度250px - 40的間距*2)/2*/
+    /* width: 243px; */
+    /* float: left; */
+    flex: 1;
+    margin-top: 20px;
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    /*讓兩個元素分開*/
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 24px;
+
+}
+
+.shipping {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 72%;
+}
+
+.sale {
+    background-color: #ec2f2f;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+    /*字母間距*/
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px 15px;
+
+    /*讓元素變成行內元素*/
+    display: inline-block;
+    position: absolute;
+
+    /*先把元素放到右上角，在做調整*/
+    top: -17px;
+    /*距離父元素上方0px*/
+    left: -38px;
+    /*距離父元素左方0px*/
+
+    /* width: 40px;
+    text-align: center; */
+}
+
+/*這個加不了margin-bottom*/
+/* .more-info{
+    margin-bottom: 20px;
+} */
+
+.product-description {
+    margin-bottom: 10px;
+}
+
+.more-info:link,
+.more-info:visited {
+    /*:visited —— 使用者已點擊過的超連結*/
+    color: black;
+    margin-bottom: 30px;
+    display: inline-block;
+    /*讓元素變成行內元素，margin-bottom才會生效*/
+}
+
+.more-info:hover,
+.more-info:active {
+    /*:active —— 當連結被點擊時（按住不放時*/
+    text-decoration: none;
+}
+
+.product-colors {
+    display: flex;
+    gap: 10px;
+}
+
+.color {
+    background-color: black;
+    height: 22px;
+    width: 22px;
+    /* display: inline-block; */
+    /*讓元素變成行內元素*/
+    /* margin-right: 10px; */
+}
+
+.color_blue {
+    background-color: #2f6ee2;
+}
+
+.color_red {
+    background-color: #ec2f2f;
+}
+
+.color_yellow {
+    background-color: #f0bf1e;
+}
+
+.color_green {
+    background-color: #90cc20;
+}
+
+.color_brown {
+    background-color: #885214;
+}
+
+.product-details {
+    /* width: 243px; */
+    /* float: left; */
+    flex: 1;
+    margin-top: 20px;
+}
+
+.details-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.details-list {
+    list-style: square;
+    margin-left: 20px;
+}
+
+/*後代選擇器*/
+.details-list li {
+    margin-bottom: 10px;
+}
+
+.add-cart {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* 小手指標 */
+    padding: 15px;
+    width: 100%;
+    /*與父元素同寬*/
+    border-top: 4px solid black;
+}
+
+.add-cart:hover {
+    background-color: white;
+    color: black;
+}
