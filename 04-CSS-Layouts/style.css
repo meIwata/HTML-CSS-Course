@@ -204,7 +204,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -279,8 +278,8 @@ nav p {
   margin-bottom: 20px;
 }
 
+/*
 .author{
-  /* padding-left: 80px; */
   float: left;
   margin-top: 10px;
   margin-left: 20px;
@@ -294,10 +293,6 @@ nav{
   float: right;
 }
 
-/* .clear{
-  clear: both;
-} */
-
 .clearfix::after{
   clear: both;
   content: '';
@@ -305,7 +300,7 @@ nav{
 }
 
 article{
-width: 825px; /*把原本的900px縮小一點，讓中間有空隙*/
+width: 825px; 
 float: left;
 }
 aside{
@@ -313,5 +308,22 @@ width: 300px;
 float: right;
 }
 footer{
-  clear: both; /*不要讓footer跟article, aside重疊，使用clear: both*/
+  clear: both;
+}
+*/
+
+/*FLEXBOX*/
+.main-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+.author-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.author{
+  margin-bottom: 0;
+  margin-left: 15px;
 }
