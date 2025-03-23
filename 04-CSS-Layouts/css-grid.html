@@ -55,6 +55,9 @@
         /* gap: 30px; */
         column-gap: 20px;
         row-gap: 40px;
+
+        /*TEMP*/
+        display: none;
       }
       
       /*轉換位置*/
@@ -78,17 +81,36 @@
 
 
       .container--2 {
-        display: none;
+        
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
+        gap: 50px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+
+        /* 在容器內對齊軌道：分配空白空間 */
+        justify-content: center;
+        /* justify-content: space-between; */
+
+        align-content: center;
+
+        /*對齊單元格內的項目：在網格單元格內移動項目*/
+        align-items: end;
+        justify-items: end;
+      }
+
+      .el--3{
+        align-self: center;
+        justify-self: center;
       }
     </style>
   </head>
