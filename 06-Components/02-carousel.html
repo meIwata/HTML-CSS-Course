@@ -46,18 +46,23 @@
             margin: 100px auto;
             /*上下100px, 左右自動 */
             background-color: #087f5b;
-            padding: 32px; /* 內距*/
-            padding-left: 86px; /* 左內距 */
+            /* padding: 32px;
+            padding-left: 86px;
+            padding-right: 48px; */
+            padding: 32px 48px 32px 86px; /* 上右下左 */
             border-radius: 8px;
             display: flex;
             align-items: center;
             gap: 86px;
+            position: relative;
+            /* 讓子元素可以絕對定位 */
         }
 
         img {
             height: 200px;
             border-radius: 8px;
-            transform: scale(1.5); /* 放大圖片 */
+            transform: scale(1.5);
+            /* 放大圖片 */
             box-shadow: 0 12px 24px rgb(0 0 0 / 25%);
         }
 
@@ -79,6 +84,68 @@
             font-size: 12px;
             color: #c3fae8;
         }
+
+        .btn {
+            background-color: #fff;
+            border: none;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            /*把元素抽出來，浮在在上面 */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            /* 游標變成手指 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn--left {
+            /* 這跟父元素的position: relative;有關 */
+            left: 0;
+            /* 左邊距0px */
+            top: 50%;
+
+            /* 50%是父元素的高度，這樣就可以置中 */
+            transform: translate(-50%, -50%);
+        }
+
+        .btn--right {
+            right: 0;
+            /* 右邊距0px */
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .btn-icon {
+            height: 24px;
+            width: 24px;
+            stroke: #087f5b;
+        }
+
+        .dots {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 32px);
+            display: flex;
+            /* 讓他左右排列 */
+            gap: 12px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #fff;
+            border: 2px solid #087f5b;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot--fill {
+            background-color: #087f5b;
+        }
     </style>
 </head>
 
@@ -94,16 +161,22 @@
             <p class="testmonial-author">Maria de Almeida</p>
             <p class="testmonial-job">Product Manager at EDP Comercial</p>
         </blockquote>
-        <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="btn-icon">
+        <button class="btn btn--left"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="btn-icon">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
             </svg>
         </button>
-        <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="btn-icon">
+        <button class="btn btn--right"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="btn-icon">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
         </button>
+        <div class="dots">
+            <div class="dot dot--fill">&nbsp;</div> <!-- 這裡的&nbps;是空白字元 -->
+            <div class="dot">&nbsp;</div>
+            <div class="dot">&nbsp;</div>
+            <div class="dot">&nbsp;</div>
+        </div>
     </div>
 </body>
 
