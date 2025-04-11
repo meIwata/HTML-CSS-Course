@@ -37,43 +37,80 @@
         body {
             font-family: 'Inter', sans-serif;
             color: #343a40;
-            line-height: 1;/* 行高 */
+            line-height: 1;
+            /* 行高 */
         }
 
         .accordion {
             width: 700px;
-            margin: 100px auto;
-            /* 上下100px，左右自動 */
+            margin: 100px auto; /* 上下100px，左右自動 */
             /* background-color: #343a40; */
-        }
-        .item{}
-        .number, .text{
-            font-size: 24px;
-            font-weight: 500;
-            color: #087f5b;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
-        .icon{
+        .item {
+            box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+            /* 陰影 */
+            padding: 24px;
+            /* 內距，由內往外推 */
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            /* 1fr: 1個欄位，auto: 自動 */
+            column-gap: 24px;
+            row-gap: 32px;
+            align-items: center;
+        }
+
+        .number,
+        .text {
+            font-size: 24px;
+            font-weight: 500;
+            /* color: #087f5b; */
+        }
+
+        .number{
+            color: #ced4da;
+        }
+
+        .icon {
             width: 24px;
             height: 24px;
             stroke: #087f5b;
         }
-        
-        .hidden-box{}
-        .hidden-box p{
+
+        .hidden-box {
+            grid-column: 2;
+            display: none; /* 把容器裡面的所有隱藏 */
+        }
+
+        .hidden-box p {
             line-height: 1.6;
             margin-bottom: 24px;
         }
-        .hidden-box ul{
+
+        .hidden-box ul {
             color: #868e96;
             margin-left: 20px;
-            display: flex; /* 轉成橫排 */
-            flex-direction: column; /* 轉成直排 */
-            gap: 12px; /* 直排間距 */
+            display: flex;
+            /* 轉成橫排 */
+            flex-direction: column;
+            /* 轉成直排 */
+            gap: 12px;
+            /* 直排間距 */
         }
-        /* .hidden-box li{
-            margin-bottom: 12px;
-        } */
+
+        .open{
+            border-top: 4px solid #087f5b; /* 上邊框 */
+        }
+        .open .hidden-box {
+            display: block; /* 把容器裡面的所有顯示 */
+        }
+        .open .number, .open .text {
+            color: #087f5b;
+        }
     </style>
 </head>
 
@@ -81,27 +118,76 @@
     <!-- div.accordion 快速寫法 -->
     <div class="accordion">
         <div class="item">
-        <p class="number">02</p>
-        <p class="text">How long do I have to return my chair?</p>
-        <!-- 小圖示可以使用: https://heroicons.com/ -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
-        <div class="hidden-box">
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit odio incidunt quod odit, facere
-                cumque veniam numquam, quis dolorem eos aliquid debitis, id quaerat voluptatum neque eligendi. Nesciunt,
-                explicabo fugiat?
-            </p>
-            <ul>
-                <li>Lorem ipsum dolor sit, amet consectetur</li>
-                <li>Odio incidunt quod odit, facere cumque veniam</li>
-                <li>Voluptatum neque eligendi. Nesciunt</li>
-                <li>Autem asperiores consequuntur expedita cupiditate</li>
-            </ul>
+            <p class="number">01</p>
+            <p class="text">Where are these chairs assembled?</p>
+            <!-- 小圖示可以使用: https://heroicons.com/ -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+            <div class="hidden-box">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit odio incidunt quod odit, facere
+                    cumque veniam numquam, quis dolorem eos aliquid debitis, id quaerat voluptatum neque eligendi.
+                    Nesciunt,
+                    explicabo fugiat?
+                </p>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur!</li>
+                    <li>Odio incidunt quod odit, facere cumque veniam.</li>
+                    <li>Voluptatum neque eligendi. Nesciunt.</li>
+                    <li>Autem asperiores consequuntur expedita cupiditate.</li>
+                </ul>
+            </div>
         </div>
-    </div>
+
+        <div class="item open"> <!-- 開啟的狀態 -->
+            <p class="number">02</p>
+            <p class="text">How long do I have to return my chair?</p>
+            <!-- 小圖示可以使用: https://heroicons.com/ -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+            <div class="hidden-box">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit odio incidunt quod odit, facere
+                    cumque veniam numquam, quis dolorem eos aliquid debitis, id quaerat voluptatum neque eligendi.
+                    Nesciunt,
+                    explicabo fugiat?
+                </p>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur!</li>
+                    <li>Odio incidunt quod odit, facere cumque veniam.</li>
+                    <li>Voluptatum neque eligendi. Nesciunt.</li>
+                    <li>Autem asperiores consequuntur expedita cupiditate.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item">
+            <p class="number">03</p>
+            <p class="text">Do you ship to countries outside the EU?</p>
+            <!-- 小圖示可以使用: https://heroicons.com/ -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+            <div class="hidden-box">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit odio incidunt quod odit, facere
+                    cumque veniam numquam, quis dolorem eos aliquid debitis, id quaerat voluptatum neque eligendi.
+                    Nesciunt,
+                    explicabo fugiat?
+                </p>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur!</li>
+                    <li>Odio incidunt quod odit, facere cumque veniam.</li>
+                    <li>Voluptatum neque eligendi. Nesciunt.</li>
+                    <li>Autem asperiores consequuntur expedita cupiditate.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 
