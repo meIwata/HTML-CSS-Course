@@ -10,35 +10,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html {
             font-family: 'Rubik', sans-serif;
             color: #444;
         }
 
-        .container{
-            margin: 0 auto; /*置中*/
+        .container {
+            margin: 0 auto;  /*置中*/
             width: 1200px;
         }
-        header{
-            background-color: orangered;
-            height: 100vh;/*視窗高度*/
+
+        header {
+            /* background-color: orangered; */
+            height: 100vh;   /*視窗高度*/
+            position: relative; /*相對定位*/
+
+            /*背景顏色過度效果*/
+            background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url(hero.jpg);
+            background-size: cover; /*背景圖片覆蓋整個區域*/
+            color: #fff;
         }
+
         nav {
             font-size: 20px;
             font-weight: 700;
             display: flex;
-            justify-content: space-between;
-            background-color: green;
+            justify-content: space-between; /* background-color: green; */
+            padding-top: 32px;
+            /* background-image: linear-gradient(to right, red,blue); */ /*漸層顏色*/
         }
 
+        .header-container {
+            width: 1200px;
+            position: absolute; /*絕對定位*/
+
+            /* 這跟父元素的相對定位有關 */
+            left: 50%;
+            top: 50%;
+            /* background-color: violet; */
+            /* text-align: center; */
+
+            /*這兩個屬性是為了讓元素置中*/
+            transform: translate(-50%, -50%); /*置中*/
+            
+        }
+        .header-container-inner{
+            width: 50%; /*佔父元素的50%*/
+            /* background-color: aquamarine; */
+        }
         h1 {
             font-size: 52px;
             margin-bottom: 32px;
+            line-height: 1.05; /*行高*/
         }
 
         p {
@@ -58,11 +87,13 @@
             padding: 16px 32px; /*上下16px，左右32px*/
             border-radius: 9px;
         }
-        h2{
+
+        h2 {
             font-size: 44px;
             margin-bottom: 48px;
         }
-        section{
+
+        section {
             padding: 96px 0;
             background-color: #f7f7f7;
         }
@@ -75,11 +106,15 @@
             <div>LOGO</div>
             <div>NAVIGATION</div>
         </nav>
-        <div class="container">
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis?</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, obcaecati aut quaerat non odio hic. Ut
-                voluptatibus, quaerat magni molestiae deserunt quia! Nisi placeat est eaque ut quae? Numquam, enim?</p>
-            <a href="#" class="btn">Start eating well</a>
+        <div class="header-container">
+            <div class="header-container-inner">
+                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, obcaecati aut quaerat non odio hic.
+                    Ut
+                    voluptatibus, quaerat magni molestiae deserunt quia! Nisi placeat est eaque ut quae? Numquam, enim?
+                </p>
+                <a href="#" class="btn">Start eating well</a>
+            </div>
         </div>
     </header>
     <section>
