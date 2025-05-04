@@ -12,12 +12,14 @@
         2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 --- 02 Colors
+        // https://maketintsandshades.com/
         - Primary Color: #e67e22
-        - Tints:
+        - Tints: #fdf2e9
         - Shades:
         - Accents:
         - Greys:
         - #555
+        - #333
 
 --- 03 Image
         - Image Source: https://unsplash.com/
@@ -36,29 +38,96 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-    }
-    html {
-            /* font-size: 10px; */
-            /* 如果設置了這個，則所有的 rem 都是相對於這個值來計算的 */
-    
-            /* 這是使用者的瀏覽器的字體大小 */
-            font-size: 62.5%; /* 10px/16px = 0.625 = 62.5% */
-    }
-    
-    body {
+}
+
+html {
+        /* font-size: 10px; */
+        /* 如果設置了這個，則所有的 rem 都是相對於這個值來計算的 */
+
+        /* 這是使用者的瀏覽器的字體大小 */
+        font-size: 62.5%;
+        /* 10px/16px = 0.625 = 62.5% */
+}
+
+body {
         font-family: sans-serif;
         line-height: 1;
         font-weight: 400;
         color: #555;
-    }
-    
-    .hero{
+}
+
+.section-hero {
+        background-color: #fdf2e9;
+        padding: 9.6rem 0;
+}
+
+.hero {
         max-width: 130rem;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
+        gap: 9.6rem;
+        align-items: center;
+}
 
-    .hero-img{
+.heading-primary {
+        font-size: 5.2rem;
+        /* 52px */
+        font-weight: 700;
+        line-height: 1.05;
+        color: #333;
+        letter-spacing: -0.5px;
+        margin-bottom: 3.2rem;
+}
+
+.hero-description {
+        font-size: 2rem;
+        /* 20px */
+        line-height: 1.6;
+        margin-bottom: 4.8rem;
+        /* 48px */
+}
+
+.btn:link,
+.btn:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1.6rem 3.2rem;
+        border-radius: 9px;
+        
+        /*過渡*/
+        transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+        background-color: #e67e22;
+        color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+        background-color: #cf711f;
+        color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+        background-color: #fff;
+        color: #555;
+}
+.btn--outline:hover,
+.btn--outline:active {
+        background-color: #fdf2e9;
+        /* border: 3px solid #fff; */ /*使用 border，會導致按鈕的尺寸變大或內容位置被擠壓*/
+        /* 邊框長在元素內部 */
+        box-shadow: inset 0 0 0 3px #fff;
+}
+
+.hero-img {
         width: 100%;
-    }
+}
+.margin-right-sm{
+        margin-right: 1.6rem !important;
+        /* 16px */;
+}
