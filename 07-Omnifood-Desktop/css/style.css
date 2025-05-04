@@ -33,14 +33,31 @@
 */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-    line-height: 1;
-    font-weight: 400;
-    color: #555;
-}
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+            /* font-size: 10px; */
+            /* 如果設置了這個，則所有的 rem 都是相對於這個值來計算的 */
+    
+            /* 這是使用者的瀏覽器的字體大小 */
+            font-size: 62.5%; /* 10px/16px = 0.625 = 62.5% */
+    }
+    
+    body {
+        font-family: sans-serif;
+        line-height: 1;
+        font-weight: 400;
+        color: #555;
+    }
+    .test{
+            background-color: blanchedalmond;
+            padding: 4rem;
+            /* width: 1000px; */
+            /* max-width: 1000px; */
+            max-width: 50rem;
+            /* 1rem = 16px; */
+            color: #fff;
+            font-size: 2rem;
+    }
