@@ -51,13 +51,14 @@
         font-weight: 400;
         color: #555;
     }
-    .test{
-            background-color: blanchedalmond;
-            padding: 4rem;
-            /* width: 1000px; */
-            /* max-width: 1000px; */
-            max-width: 50rem;
-            /* 1rem = 16px; */
-            color: #fff;
-            font-size: 2rem;
+    
+    .hero{
+        max-width: 130rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-img{
+        width: 100%;
     }
