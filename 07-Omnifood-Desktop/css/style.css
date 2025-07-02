@@ -301,25 +301,7 @@
         font-size: 1.8rem;
 }
 
-.list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
-}
 
-.list-icon {
-        width: 3rem;
-        height: 3rem;
-        color: #e67e22;
-}
-
-.list-item {
-        font-size: 1.8rem;
-        display: flex;
-        align-items: center;
-        gap: 1.6rem;
-}
 
 /************************************/
 /* TESTIMONIALS  SECTION */
@@ -330,8 +312,9 @@
         grid-template-columns: 5.5fr 4.5fr;
         align-items: center;
 }
-.testimonials-container{
-      padding: 9.6rem;  
+
+.testimonials-container {
+        padding: 9.6rem;
 }
 
 .testimonials {
@@ -364,7 +347,8 @@
         gap: 1.6rem;
         padding: 1.6rem;
 }
-.gallery-item{
+
+.gallery-item {
         overflow: hidden;
 }
 
@@ -374,7 +358,49 @@
         transition: all 0.4s;
 }
 
-.gallery-item img:hover{
+.gallery-item img:hover {
         /* transform: rotate(45deg); */
         transform: scale(1.1);
+}
+
+/************************************/
+/* PRICING  SECTION */
+/************************************/
+.section-pricing {
+        padding: 9.6rem 0;
+}
+
+.plan-header {
+        text-align: center;
+        margin-bottom: 4.8rem;
+}
+
+.plan-name {
+        color: #cf711f;
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.75;
+        margin-bottom: 3.2rem;
+}
+
+.plan-price {
+        font-size: 6.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1.6rem;
+}
+.plan-price span{
+        font-size: 3rem;
+        font-weight: 500;
+        margin-right: 0.8rem;
+}
+.plan-text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #6f6f6f;
+}
+.plan-sign-up{
+        text-align: center;
+        margin-top: 4.8rem;
 }
