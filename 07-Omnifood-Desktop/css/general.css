@@ -76,6 +76,7 @@ body {
 /************************************/
 /* GENERAL REUSEABLE COMPONENTS */
 /************************************/
+
 .container {
     /* 1140px */
     max-width: 120rem;
@@ -108,6 +109,9 @@ body {
 
 .grid--4-cols {
     grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
@@ -272,4 +276,11 @@ body {
 
 strong {
     font-weight: 500;
+}
+
+/************************************/
+/* FOOTER */
+/************************************/
+.footer{
+    padding: 9.6rem 0;
 }
